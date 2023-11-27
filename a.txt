@@ -1,1 +1,2 @@
-THis is another file in B repo 
+This is a text file named A
+now second line added with ne wthings lets see
