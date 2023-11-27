@@ -1,0 +1,16 @@
+name: Update B repo from A repo
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  update-b-repo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: 'https://github.com/venkatsai8/source-repo-a.git'
+          token: ${{ secrets.GITHUB_TOKEN }}
