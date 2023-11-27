@@ -6,11 +6,11 @@ on:
       - master
 
 jobs:
-  update-b-repo:
+  source-repo-a:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
         with:
-          repository: 'https://github.com/venkatsai8/source-repo-a.git'
+          repository: 'https://{classic_token_natraj}@github.com/venkatsai8/source-repo-a'
           token: ${{ secrets.GITHUB_TOKEN }}
