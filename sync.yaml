@@ -1,0 +1,30 @@
+name: Sync Repositories
+
+on:
+  push:
+    branches:
+      - master  # Change to your default branch name
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository B
+        uses: actions/checkout@v2
+
+      - name: Sync with Repository A
+        run: |
+          git remote add upstream https://github.com/venkatsai8/source-repo-a.git
+          git config --global user.email "natrajsai7@gmail.com"
+          git config --global user.name "venkatsai8"
+          git fetch upstream
+          git checkout -b sync-branch
+          git merge upstream/master --allow-unrelated-histories
+          git push origin sync-branch
+          git checkout master  # Change to your default branch name
+          git merge sync-branch
+          git push origin master  # Change to your default branch name
+        env:
+          GHTOKEN: ${{ secrets.GHTOKEN }}
+
