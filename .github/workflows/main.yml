@@ -1,16 +1,18 @@
-name: Update B repo from A repo
+name: Sync Repositories
 
 on:
   push:
     branches:
-      - master
+      - master  # Change to your default branch name
 
 jobs:
-  source-repo-a:
+  sync:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-        with:
-          repository: 'https://{classic_token_natraj}@github.com/venkatsai8/source-repo-a'
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout Repository B
+        uses: actions/checkout@v2
+
+      - name: Sync with Repository A
+        run: |
+          git remote add upstream https://github.com/venkatsai8/dummy.git
