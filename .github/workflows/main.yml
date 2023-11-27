@@ -15,7 +15,7 @@ jobs:
 
       - name: Sync with Repository A
         run: |
-          git remote add upstream https://github.com/venkatsai8/dummy.git
+          git remote add upstream https://github.com/venkatsai8/source-repo-a.git
           git config --global user.email "natrajsai7@gmail.com"
           git config --global user.name "venkatsai8"
           git fetch upstream
