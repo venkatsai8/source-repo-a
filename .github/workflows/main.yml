@@ -32,7 +32,7 @@ jobs:
     - name: Apply Changes to Repository B
       run: |
         cd dest-repo-b
-        git cherry-pick FETCH_HEAD
+        git cherry-pick --continue FETCH_HEAD
 
     - name: Push Changes to Repository B
       uses: actions/checkout@v2
