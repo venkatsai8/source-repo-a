@@ -1,7 +1,1 @@
 This is a text file named A
-<<<<<<< HEAD
-now second line added with ne wthings lets see
-=======
-now second line added with ne wthings lets see hffhbhbfjbfhb
-bvfdvfdvbhfdbvhbvhfbvhfbvhfbvhfdbvhb
->>>>>>> source/master
