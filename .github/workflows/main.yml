@@ -25,6 +25,8 @@ jobs:
     - name: Fetch Changes from Repository A
       run: |
         cd dest-repo-b
+        git config --global user.email "natrajsai7@gmail.com"
+        git config --global user.name "venkatsai8"
         git fetch origin ${{ github.event.pull_request.head.sha }}
 
     - name: Apply Changes to Repository B
