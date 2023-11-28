@@ -1,2 +1,3 @@
 This is a text file named A
 second line is adding in source repository
+third line added 
